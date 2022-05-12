@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed";
+    background-color: hsl(0, 0%, 81%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-areas: "daniel daniel jonathan-walters kira-whittle" "jeanette-harmon patrick-abrams patrick-abrams kira-whittle";
+    grid-gap: 20px;
+    position: relative;
+    max-height: 100vh;
+    padding: 70px;
+}
+@media (max-width:769px) {
+    .container{
+        grid-template-areas: "daniel" "jonathan-walters" "jeanette-harmon" "patrick-abrams" "kira-whittle";
+        max-height: 2000px;
+    }
+}
+.card{
+    padding: 20px;
+    border-radius: 7px;
+    position: relative;
+    z-index: -2;
+}
+.container .daniel{
+    background-color: hsl(263, 55%, 52%);
+}
+.card .header{
+    display: flex;
+    z-index: 1;
+}
+.card .header img{
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 50%);
+    height: 30px;
+    margin-right: 10px;
+}
+.card h3{
+    font-size: 13px;
+    color: hsl(0, 0%, 81%);
+    margin: 0;
+}
+.card .name p{
+    color:  hsl(0, 0%, 50%);
+    margin: 0;
+    font-size: 11px;
+}
+.card .main-paragraph{
+    color: white;
+}
+.card .small-paragraph{
+    font-size: 13px;
+    color: hsl(0, 0%, 70%);
+}
+.card .qoute-mark img{
+    position: absolute;
+    top: 0;
+    right: 80px;
+    z-index: -1;
+    height: 90px;
+}
+@media (max-width:400px) {
+    .card .qoute-mark img{
+        right: 20px;
+        height: 60px;
+    }
+}
+.container .daniel{
+    grid-area:daniel;
+}
+.container .jonathan-walters{
+    grid-area: jonathan-walters;
+    background-color: hsl(217, 19%, 35%);
+}
+.container .kira-whittle{
+    grid-area: kira-whittle;
+    background-color: hsl(0, 0%, 100%);
+}
+.container .kira-whittle h3{
+    color: hsl(217, 19%, 35%);
+}
+.container .kira-whittle .main-paragraph{
+    color: hsl(217, 19%, 35%);
+}
+.container .jeanette-harmon{
+    grid-area: jeanette-harmon;
+    background-color: hsl(0, 0%, 100%);
+}
+.container .jeanette-harmon h3{
+    color: hsl(217, 19%, 35%);
+}
+.container .jeanette-harmon .main-paragraph{
+    color: hsl(217, 19%, 35%);
+}
+.container .patrick-abrams{
+    grid-area: patrick-abrams;
+    background-color: hsl(219, 29%, 14%);
+}
